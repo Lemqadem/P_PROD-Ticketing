@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "id": "ed150ec4-c610-4cd5-a4c8-6ecedbada9bd",
+    "type": "commitless",
+    "name": "Présentation du GitJournal",
+    "description": "",
+    "date": "2025-11-04T09:40:00.000Z",
+    "duration": 45,
+    "status": "Done",
+    "author": "Fatality-Evan"
+  }
+]
