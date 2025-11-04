@@ -50,5 +50,15 @@
     "status": "Done",
     "author": "Lemqadem",
     "patch": true
+  },
+  {
+    "id": "7d37e164-cbf3-4b33-8f5b-7376ed25dba5",
+    "type": "commitless",
+    "name": "Présentation du programme + gitjournal",
+    "description": "",
+    "date": "2025-11-04T10:17:00.000Z",
+    "duration": 45,
+    "status": "Done",
+    "author": "Lemqadem"
   }
 ]
