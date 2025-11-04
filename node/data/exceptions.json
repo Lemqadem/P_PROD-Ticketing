@@ -60,5 +60,15 @@
     "status": "Done",
     "author": "Lemqadem",
     "patch": true
+  },
+  {
+    "id": "08a1056a-ec2e-44a0-b245-99f34a74850d",
+    "type": "commitless",
+    "name": "Présentation du GitJournal",
+    "description": "présentation des nouveaux projet + présentation du GitJournal",
+    "date": "2025-11-04T10:20:00.000Z",
+    "duration": 45,
+    "status": "Done",
+    "author": "Fatality-Evan"
   }
 ]
