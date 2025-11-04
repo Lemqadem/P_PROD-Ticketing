@@ -8,5 +8,15 @@
     "duration": 45,
     "status": "Done",
     "author": "Fatality-Evan"
+  },
+  {
+    "id": "74f31191-3ed2-4f81-891e-befb14c40bd4",
+    "type": "commitless",
+    "name": "Présentation du programme + gitjournal",
+    "description": "",
+    "date": "2025-11-04T09:43:00.000Z",
+    "duration": 45,
+    "status": "Done",
+    "author": "Lemqadem"
   }
 ]
