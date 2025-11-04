@@ -8,5 +8,15 @@
     "duration": 45,
     "status": "Done",
     "author": "Fatality-Evan"
+  },
+  {
+    "id": "a18a9e7a-c4b1-4d9c-8ac4-dad144de8f8b",
+    "type": "commitless",
+    "name": "test_jdt",
+    "description": "test sur le journal de travail",
+    "date": "2025-11-04T09:43:00.000Z",
+    "duration": 5,
+    "status": "Done",
+    "author": "Fatality-Evan"
   }
 ]
