@@ -1,34 +1,54 @@
 [
   {
-    "id": "ed150ec4-c610-4cd5-a4c8-6ecedbada9bd",
-    "type": "commitless",
-    "name": "Présentation du GitJournal",
-    "description": "",
-    "date": "2025-11-04T09:40:00.000Z",
-    "duration": 45,
+    "id": "f9af45f7-1ea1-4c4c-a439-ab0ea8eb4a93",
+    "type": "commitpatch",
+    "sha": "6cd04f709c9861ef0e83f2b632ae56d0d789889b",
+    "url": "https://github.com/Lemqadem/P_PROD-Ticketing/commit/6cd04f709c9861ef0e83f2b632ae56d0d789889b",
+    "name": "🚩 TEST 🚩",
+    "description": "🚩 TEST 🚩",
+    "date": "2025-11-04T10:31",
+    "duration": 0,
     "status": "Done",
-    "author": "Fatality-Evan"
+    "author": "Lemqadem",
+    "patch": true
   },
   {
-
-    "id": "a18a9e7a-c4b1-4d9c-8ac4-dad144de8f8b",
-    "type": "commitless",
-    "name": "test_jdt",
-    "description": "test sur le journal de travail",
-    "date": "2025-11-04T09:43:00.000Z",
-    "duration": 5,
+    "id": "be408e57-f35f-4370-9f19-c4d2cf2a28de",
+    "type": "commitpatch",
+    "sha": "ba4529e4d435ba985960362755482668e22d79e9",
+    "url": "https://github.com/Lemqadem/P_PROD-Ticketing/commit/ba4529e4d435ba985960362755482668e22d79e9",
+    "name": "🚩 TEST 🚩",
+    "description": "🚩 TEST 🚩",
+    "date": "2025-11-04T10:36",
+    "duration": 0,
     "status": "Done",
-    "author": "Fatality-Evan"
-},
-	{
-    "id": "74f31191-3ed2-4f81-891e-befb14c40bd4",
-    "type": "commitless",
-    "name": "Présentation du programme + gitjournal",
-    "description": "",
-    "date": "2025-11-04T09:43:00.000Z",
-    "duration": 45,
+    "author": "Lemqadem",
+    "patch": true
+  },
+  {
+    "id": "723b2bc4-5a2a-4b38-a0bb-0266459dc7e2",
+    "type": "commitpatch",
+    "sha": "168f6fa8fa279c4b2feb17e5d2a9884da6446784",
+    "url": "https://github.com/Lemqadem/P_PROD-Ticketing/commit/168f6fa8fa279c4b2feb17e5d2a9884da6446784",
+    "name": "🚩 TEST 🚩",
+    "description": "🚩 TEST 🚩",
+    "date": "2025-11-04T10:40",
+    "duration": 0,
     "status": "Done",
-    "author": "Lemqadem"
-
+    "author": "Lemqadem",
+    "patch": true
+  },
+  {
+    "id": "bf743e55-8368-4b54-a70c-210be560b278",
+    "type": "commitpatch",
+    "sha": "36b09aafed0043b2e154a172f08c76c8f1c895d3",
+    "url": "https://github.com/Lemqadem/P_PROD-Ticketing/commit/36b09aafed0043b2e154a172f08c76c8f1c895d3",
+    "name": "🚩 TEST 🚩",
+    "description": "🚩 TEST 🚩",
+    "date": "2025-11-04T10:44",
+    "duration": 0,
+    "status": "Done",
+    "author": "Lemqadem",
+    "patch": true
   }
 ]
