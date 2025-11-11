@@ -93,5 +93,27 @@
     "duration": 15,
     "status": "Done",
     "author": "?"
+  },
+  {
+    "id": "48e99610-a602-482b-b1bb-4e54fa712356",
+    "type": "commitless",
+    "name": "exploration",
+    "description": "decouverte de l'interface glpi",
+    "date": "2025-11-11T10:55:00.000Z",
+    "duration": 30,
+    "status": "Done"
+  },
+  {
+    "id": "d4c31f19-1626-4197-9b9b-dbe29089942b",
+    "type": "commitpatch",
+    "sha": "3564b784c89972d6e9f8765ee71559a5f5b33fbc",
+    "url": "https://github.com/Lemqadem/P_PROD-Ticketing/commit/3564b784c89972d6e9f8765ee71559a5f5b33fbc",
+    "name": "feat docker container/image",
+    "description": "J'ai créer une image docker via un docker compose puis un container pour la db puis pour l'interfaceWEB. Je peux maintenant acceder à l'interface glpi via le local host",
+    "date": "2025-11-11T10:54:00.000Z",
+    "duration": 45,
+    "status": "Done",
+    "author": "Lemqadem",
+    "patch": true
   }
 ]
