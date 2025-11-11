@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  db:
+    image: mariadb:10.11
+    container_name: glpi-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: tw4M8kdMQ4b7676zZSMz
+      MYSQL_DATABASE: db_ticketing
+      MYSQL_USER: glpi
+      MYSQL_PASSWORD: tw4M8kdMQ4b7676zZSMz
+    volumes:
+      - ./storage/mysql:/var/lib/mysql
+    networks:
+      - glpi-net
+
+  glpi:
+    image: glpi/glpi:latest
+    container_name: glpi-web
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment:
+      GLPI_DB_HOST: db
+      GLPI_DB_PORT: 3306
+      GLPI_DB_NAME: db_ticketing
+      GLPI_DB_USER: glpi
+      GLPI_DB_PASSWORD: tw4M8kdMQ4b7676zZSMz
+    depends_on:
+      - db
+    volumes:
+      - ./storage/glpi:/var/glpi
+    networks:
+      - glpi-net
+
+networks:
+  glpi-net:
+    driver: bridge

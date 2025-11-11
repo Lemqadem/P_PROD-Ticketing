@@ -1,0 +1,10 @@
+jdt:
+4.11.2025
+------------------------------------
+3p: tester le jdt
+11.11.2025
+------------------------------------
+5minutes daily scrum metting:
+Evan:fait:betaTesteur gitjdt    a faire:apprendre comment faire le ticketing    prblm  gitjdt qui ne marche pas vraiment-> plein de bug
+Ervan:fait:betaTesteur gitjdt   a faire:apprendre comment faire le ticketing	prblm: gitjdt qui ne marche pas vraiment-> plein de bug
+

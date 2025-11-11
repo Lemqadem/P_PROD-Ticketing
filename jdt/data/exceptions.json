@@ -64,11 +64,34 @@
   {
     "id": "629ef155-a81f-4402-9686-17028c9b3860",
     "type": "commitless",
-    "name": "test",
-    "description": "",
-    "date": "2025-11-04T10:21:00.000Z",
-    "duration": 0,
+    "name": "beta test du gitjournal de monsieur carrel",
+    "description": "On a essayé avec Monsieur Gusarov d'utiliser le gitjournal en vain, c'était interessant mais on a pas pu commencer a travailler sur le projet ",
+    "date": "2025-11-04T11:21",
+    "duration": 90,
     "status": "Done",
     "author": "Lemqadem"
+  },
+  {
+    "id": "a43a5aba-a1ce-4714-a33f-51bfbcc0995b",
+    "type": "commitpatch",
+    "sha": "eed6d64414a3fedcf4cec2927589c53176f94b5f",
+    "url": "https://github.com/Lemqadem/P_PROD-Ticketing/commit/eed6d64414a3fedcf4cec2927589c53176f94b5f",
+    "name": "documentation",
+    "description": "comment marche glpi avec docker",
+    "date": "2025-11-11T11:21",
+    "duration": 45,
+    "status": "Done",
+    "author": "Lemqadem",
+    "patch": true
+  },
+  {
+    "id": "f87b3f05-e1b2-4170-92df-be56c0968906",
+    "type": "commitless",
+    "name": "image docker glpi",
+    "description": "J'ai pris sur le dockerHub l'image de glpi et j'ai essayé de la faire marcher avec l'interface en vain",
+    "date": "2025-11-11T11:25",
+    "duration": 15,
+    "status": "Done",
+    "author": "?"
   }
 ]
