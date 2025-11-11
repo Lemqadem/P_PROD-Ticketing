@@ -1,0 +1,250 @@
+Parfait 🔥 — on reprend **depuis zéro** pour que tu comprennes **tout** clairement.
+Tu veux créer **un système de ticketing complet**, que les utilisateurs (élèves, profs, etc.) puissent ouvrir via **une interface web**, et que toi (ou les techniciens) puissiez gérer via **un tableau de bord d’administration**.
+
+Tu veux tout **héberger sur Docker**, donc sur ta machine (ou un serveur).
+Allons **étape par étape** 👇
+
+---
+
+## 🎯 Objectif final
+
+Tu veux arriver à ça :
+
+💻 Un utilisateur va sur → `http://ton-serveur:8080`
+➡️ Il voit une **interface GLPI** (formulaire pour créer un ticket, consulter ses demandes).
+➡️ Les techniciens se connectent à une **interface d’administration GLPI** pour gérer ces tickets.
+
+Tout tourne **en local sur Docker**, donc tu n’as pas besoin d’installer quoi que ce soit sur ta machine (à part Docker).
+
+---
+
+## ⚙️ Étape 1 — Comprendre ce qu’il faut
+
+GLPI, c’est une **application web PHP**.
+Elle a besoin de 3 éléments principaux :
+
+| Élément                              | Rôle                                   | Exemple dans Docker         |
+| ------------------------------------ | -------------------------------------- | --------------------------- |
+| Serveur web (Apache + PHP)           | fait tourner GLPI                      | `glpi/glpi` ou `php:apache` |
+| Base de données                      | stocke les tickets, utilisateurs, etc. | `mysql` ou `mariadb`        |
+| (optionnel) Interface de gestion SQL | t’aide à voir la base                  | `phpmyadmin`                |
+
+---
+
+## 🧱 Étape 2 — Préparer ton dossier de projet
+
+Crée un dossier (par exemple sur ton bureau ou ton disque) :
+
+```bash
+mkdir glpi-project
+cd glpi-project
+```
+
+Dedans, tu vas mettre :
+
+```
+glpi-project/
+├── docker-compose.yml
+├── .env
+└── storage/
+    ├── mysql/   (les données de la base)
+    └── glpi/    (les fichiers persistants de GLPI)
+```
+
+---
+
+## ⚙️ Étape 3 — Créer le fichier `.env`
+
+Crée un fichier nommé `.env` dans `glpi-project/`, et mets dedans :
+
+```env
+MYSQL_ROOT_PASSWORD=root
+MYSQL_DATABASE=glpi
+MYSQL_USER=glpi
+MYSQL_PASSWORD=glpi
+```
+
+Ce sont les identifiants de la base MySQL.
+GLPI les utilisera pour se connecter.
+
+---
+
+## 🐳 Étape 4 — Créer le fichier `docker-compose.yml`
+
+Toujours dans `glpi-project/`, crée le fichier `docker-compose.yml` :
+
+```yaml
+version: "3.8"
+
+services:
+  db:
+    image: mariadb:10.11
+    container_name: glpi-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - ./storage/mysql:/var/lib/mysql
+    networks:
+      - glpi-net
+
+  glpi:
+    image: glpi/glpi:latest
+    container_name: glpi-web
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment:
+      GLPI_DB_HOST: db
+      GLPI_DB_PORT: 3306
+      GLPI_DB_NAME: ${MYSQL_DATABASE}
+      GLPI_DB_USER: ${MYSQL_USER}
+      GLPI_DB_PASSWORD: ${MYSQL_PASSWORD}
+    depends_on:
+      - db
+    volumes:
+      - ./storage/glpi:/var/glpi
+    networks:
+      - glpi-net
+
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: glpi-phpmyadmin
+    restart: unless-stopped
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: ${MYSQL_USER}
+      PMA_PASSWORD: ${MYSQL_PASSWORD}
+    depends_on:
+      - db
+    networks:
+      - glpi-net
+
+networks:
+  glpi-net:
+    driver: bridge
+```
+
+---
+
+## 🚀 Étape 5 — Démarrer GLPI
+
+Dans ton terminal (dans le dossier du projet) :
+
+```bash
+docker compose up -d
+```
+
+➡️ Docker va télécharger les images, créer les conteneurs et les relier.
+
+Quand c’est fini, vérifie :
+
+```bash
+docker ps
+```
+
+Tu devrais voir :
+
+```
+glpi-web
+glpi-db
+glpi-phpmyadmin
+```
+
+---
+
+## 🌐 Étape 6 — Accéder à ton interface web
+
+* 🌍 GLPI → [http://localhost:8080](http://localhost:8080)
+* 🛠️ phpMyAdmin → [http://localhost:8081](http://localhost:8081)
+
+---
+
+## 🧭 Étape 7 — Installation de GLPI
+
+Quand tu vas sur [http://localhost:8080](http://localhost:8080) :
+
+1. Choisis **Français**
+2. Accepte la licence
+3. Clique sur **Installer**
+4. Configuration de la base :
+
+   * Serveur : `db`
+   * Utilisateur : `glpi`
+   * Mot de passe : `glpi`
+   * Base : `glpi`
+5. GLPI installe ses tables
+6. Clique sur **Continuer**
+
+À la fin, il te donne les **identifiants par défaut** :
+
+| Rôle               | Utilisateur | Mot de passe |
+| ------------------ | ----------- | ------------ |
+| Super-admin        | glpi        | glpi         |
+| Technicien         | tech        | tech         |
+| Utilisateur normal | normal      | normal       |
+
+---
+
+## 👩‍💻 Étape 8 — C’est prêt 🎉
+
+* Les utilisateurs vont sur **[http://localhost:8080](http://localhost:8080)** et se connectent (ou créent des tickets s’ils ont un compte).
+* Toi (admin) tu te connectes avec `glpi/glpi`.
+* Tu peux personnaliser le tableau de bord, créer des catégories, assigner des techniciens, etc.
+
+---
+
+## 📦 Étape 9 — (Optionnel) Héberger pour l’école
+
+Si tu veux que **d’autres personnes du réseau de l’école** y accèdent :
+
+1. Trouve ton IP locale :
+
+   ```bash
+   ipconfig (Windows)
+   # ou
+   ip a (Linux)
+   ```
+2. Disons que ton IP est `192.168.1.45`
+3. Tes camarades pourront accéder à :
+
+   ```
+   http://192.168.1.45:8080
+   ```
+
+Tu peux aussi :
+
+* ouvrir le port sur ton pare-feu
+* ou héberger ça sur un serveur de l’école ou une VM
+
+---
+
+## 🔧 Étape 10 — (Bonus) Sauvegardes
+
+Les données importantes sont dans :
+
+* `./storage/mysql` → la base de données
+* `./storage/glpi` → les fichiers d’upload, plugins, etc.
+
+Tu peux les sauvegarder ou les déplacer sur un autre serveur facilement.
+
+---
+
+## ✅ En résumé
+
+| Étape | Action                     | Fichier                 |
+| ----- | -------------------------- | ----------------------- |
+| 1     | Créer le dossier du projet | `glpi-project/`         |
+| 2     | Configurer la base         | `.env`                  |
+| 3     | Créer la stack Docker      | `docker-compose.yml`    |
+| 4     | Lancer Docker              | `docker compose up -d`  |
+| 5     | Accéder à GLPI             | `http://localhost:8080` |
+
+---
+
+Souhaites-tu que je t’explique **comment personnaliser l’interface** (par exemple mettre le logo de ton école, ou simplifier l’écran de ticket pour les élèves) ensuite ?
