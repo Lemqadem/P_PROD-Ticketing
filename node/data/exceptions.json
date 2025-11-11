@@ -70,5 +70,14 @@
     "duration": 45,
     "status": "Done",
     "author": "Fatality-Evan"
+  },
+  {
+    "id": "b3c06ecb-c800-4ac2-a109-b2b4b44061ab",
+    "type": "commitless",
+    "name": "learn(projet)",
+    "description": "aclimatisation avec GLPI. J'ai regardé plein de possibilité de personnalisation.",
+    "date": "2025-11-11T10:19:00.000Z",
+    "duration": 135,
+    "status": "Done"
   }
 ]
