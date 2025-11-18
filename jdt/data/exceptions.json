@@ -115,5 +115,24 @@
     "status": "Done",
     "author": "Lemqadem",
     "patch": true
+  },
+  {
+    "id": "24187237-d603-4725-bc36-cc57556d551b",
+    "type": "commitless",
+    "name": "feat création et gestion des lieux et des roles sur glpi",
+    "description": " création et gestion des lieux et des roles sur glpi",
+    "date": "2025-11-18T11:19",
+    "duration": 40,
+    "status": "Done",
+    "author": "?"
+  },
+  {
+    "id": "bee6b07d-396e-4f99-867e-2d8a64a74a77",
+    "type": "commitless",
+    "name": "feat jdt",
+    "description": "",
+    "date": "2025-11-18T10:21:00.000Z",
+    "duration": 5,
+    "status": "Done"
   }
 ]
