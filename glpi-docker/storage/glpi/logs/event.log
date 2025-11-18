@@ -44,3 +44,7 @@
 [login] 3: user1 se connecte depuis l'IP 172.18.0.1
 2025-11-18 09:07:20 [@91a848f7b16c]
 [login] 3: admin se connecte depuis l'IP 172.18.0.1
+2025-11-18 10:12:52 [@91a848f7b16c]
+[login] 3: Connexion échouée de user depuis l'IP 172.18.0.1
+2025-11-18 10:13:01 [@91a848f7b16c]
+[login] 3: admin se connecte depuis l'IP 172.18.0.1
