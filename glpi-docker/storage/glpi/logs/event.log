@@ -18,3 +18,29 @@
 [login] 3: glpi se connecte depuis l'IP 172.18.0.1
 2025-11-11 10:18:13 [@91a848f7b16c]
 [login] 3: normal se connecte depuis l'IP 172.18.0.1
+2025-11-18 07:59:10 [@91a848f7b16c]
+[login] 3: Connexion échouée de admin depuis l'IP 172.18.0.1
+2025-11-18 07:59:20 [@91a848f7b16c]
+[login] 3: glpi se connecte depuis l'IP 172.18.0.1
+2025-11-18 08:04:36 [@91a848f7b16c]
+[login] 3: normal se connecte depuis l'IP 172.18.0.1
+2025-11-18 08:05:43 [@91a848f7b16c]
+[login] 3: admin se connecte depuis l'IP 172.18.0.1
+2025-11-18 08:57:13 [@91a848f7b16c]
+[login] 3: Connexion échouée de admin depuis l'IP 172.18.0.1
+2025-11-18 08:57:31 [@91a848f7b16c]
+[login] 3: Connexion échouée de admin depuis l'IP 172.18.0.1
+2025-11-18 08:57:36 [@91a848f7b16c]
+[login] 3: Connexion échouée de glpi depuis l'IP 172.18.0.1
+2025-11-18 08:57:43 [@91a848f7b16c]
+[login] 3: Connexion échouée de admin depuis l'IP 172.18.0.1
+2025-11-18 08:58:09 [@91a848f7b16c]
+[login] 3: Connexion échouée de admin depuis l'IP 172.18.0.1
+2025-11-18 08:58:40 [@91a848f7b16c]
+[login] 3: Connexion échouée de admin depuis l'IP 172.18.0.1
+2025-11-18 08:59:00 [@91a848f7b16c]
+[login] 3: admin se connecte depuis l'IP 172.18.0.1
+2025-11-18 09:04:28 [@91a848f7b16c]
+[login] 3: user1 se connecte depuis l'IP 172.18.0.1
+2025-11-18 09:07:20 [@91a848f7b16c]
+[login] 3: admin se connecte depuis l'IP 172.18.0.1

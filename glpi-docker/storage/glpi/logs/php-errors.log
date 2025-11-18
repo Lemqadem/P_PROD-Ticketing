@@ -5191,3 +5191,49 @@
   ./vendor/symfony/http-kernel/Kernel.php:197        Symfony\Component\HttpKernel\HttpKernel->handle()
   ./public/index.php:70                              Symfony\Component\HttpKernel\Kernel->handle()
 
+[2025-11-18 07:57:10] glpi.WARNING:   *** Test logger
+[2025-11-18 07:57:10] glpi.CRITICAL:   *** Error thrown while running command "{command}". Message: "{message}"
+  Backtrace :
+  ...le/Database/CheckSchemaIntegrityCommand.php:170 
+  ./src/Glpi/Console/AbstractCommand.php:107         Glpi\Console\Database\CheckSchemaIntegrityCommand->initDbConnection()
+  ./vendor/symfony/console/Command/Command.php:292   Glpi\Console\AbstractCommand->initialize()
+  ./vendor/symfony/console/Application.php:1088      Symfony\Component\Console\Command\Command->run()
+  ./src/Glpi/Console/Application.php:330             Symfony\Component\Console\Application->doRunCommand()
+  ./vendor/symfony/console/Application.php:324       Glpi\Console\Application->doRunCommand()
+  ./vendor/symfony/console/Application.php:175       Symfony\Component\Console\Application->doRun()
+  ./bin/console:144                                  Symfony\Component\Console\Application->run()
+
+[2025-11-18 07:57:10] glpi.WARNING:   *** Test logger
+[2025-11-18 07:57:19] glpi.WARNING:   *** Test logger
+[2025-11-18 07:57:21] glpi.WARNING:   *** Test logger
+[2025-11-18 08:33:25] glpi.CRITICAL:   *** Uncaught PHP Exception Glpi\Exception\ItemLinkException: "Post data must contain (greater than 0): users_id" at CommonDBRelation.php line 2180
+  Backtrace :
+  ./src/CommonDBRelation.php:2180                    
+  ./front/profile_user.form.php:46                   CommonDBRelation->check()
+  ...Glpi/Controller/LegacyFileLoadController.php:64 require()
+  ./vendor/symfony/http-kernel/HttpKernel.php:181    Glpi\Controller\LegacyFileLoadController->__invoke()
+  ./vendor/symfony/http-kernel/HttpKernel.php:76     Symfony\Component\HttpKernel\HttpKernel->handleRaw()
+  ./vendor/symfony/http-kernel/Kernel.php:197        Symfony\Component\HttpKernel\HttpKernel->handle()
+  ./public/index.php:70                              Symfony\Component\HttpKernel\Kernel->handle()
+
+[2025-11-18 08:33:30] glpi.CRITICAL:   *** Uncaught PHP Exception Glpi\Exception\ItemLinkException: "Post data must contain (greater than 0): users_id" at CommonDBRelation.php line 2180
+  Backtrace :
+  ./src/CommonDBRelation.php:2180                    
+  ./front/profile_user.form.php:46                   CommonDBRelation->check()
+  ...Glpi/Controller/LegacyFileLoadController.php:64 require()
+  ./vendor/symfony/http-kernel/HttpKernel.php:181    Glpi\Controller\LegacyFileLoadController->__invoke()
+  ./vendor/symfony/http-kernel/HttpKernel.php:76     Symfony\Component\HttpKernel\HttpKernel->handleRaw()
+  ./vendor/symfony/http-kernel/Kernel.php:197        Symfony\Component\HttpKernel\HttpKernel->handle()
+  ./public/index.php:70                              Symfony\Component\HttpKernel\Kernel->handle()
+
+[2025-11-18 09:08:26] glpi.WARNING:   *** Warning: Undefined array key "entities_id" at CommonITILObject.php line 8290
+  Backtrace :
+  ./src/CommonITILObject.php:8290                    
+  ./src/CommonITILObject.php:2346                    CommonITILObject->getITILTemplateFromInput()
+  ./front/ticket.form.php:89                         CommonITILObject->enforceReadonlyFields()
+  ...Glpi/Controller/LegacyFileLoadController.php:64 require()
+  ./vendor/symfony/http-kernel/HttpKernel.php:181    Glpi\Controller\LegacyFileLoadController->__invoke()
+  ./vendor/symfony/http-kernel/HttpKernel.php:76     Symfony\Component\HttpKernel\HttpKernel->handleRaw()
+  ./vendor/symfony/http-kernel/Kernel.php:197        Symfony\Component\HttpKernel\HttpKernel->handle()
+  ./public/index.php:70                              Symfony\Component\HttpKernel\Kernel->handle()
+
