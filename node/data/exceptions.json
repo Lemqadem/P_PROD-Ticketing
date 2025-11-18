@@ -79,5 +79,14 @@
     "date": "2025-11-11T10:19:00.000Z",
     "duration": 135,
     "status": "Done"
+  },
+  {
+    "id": "979cadec-2dea-406f-aeb5-16048bcaaa5e",
+    "type": "commitless",
+    "name": "learn(projet)",
+    "description": "faire la création de groupes + la création de nouveaux utilisateurs + test des nouveaux utilisateurs avec leurs privilèges et création de plus de fournitures",
+    "date": "2025-11-18T10:19:00.000Z",
+    "duration": 135,
+    "status": "Done"
   }
 ]
