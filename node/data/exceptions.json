@@ -98,5 +98,15 @@
     "duration": 5,
     "status": "Done",
     "author": "Fatality-Evan"
+  },
+  {
+    "id": "774362bc-6268-4901-8487-9a350a365ec9",
+    "type": "commitless",
+    "name": "learn(projet)",
+    "description": "réussit a connecter les PCs dans les tickets mais reste un problème avec le docker qui n'a pas accès aux objet qui se trouve dans le parc info",
+    "date": "2025-11-25T10:21:00.000Z",
+    "duration": 100,
+    "status": "Done",
+    "author": "Fatality-Evan"
   }
 ]
