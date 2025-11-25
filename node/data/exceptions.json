@@ -88,5 +88,15 @@
     "date": "2025-11-18T10:19:00.000Z",
     "duration": 135,
     "status": "Done"
+  },
+  {
+    "id": "4f393fb4-572c-4b8f-a344-b8ada5e5728f",
+    "type": "commitless",
+    "name": "SCRUM meeting",
+    "description": "faire le meeting de la journée",
+    "date": "2025-11-25T10:19:00.000Z",
+    "duration": 5,
+    "status": "Done",
+    "author": "Fatality-Evan"
   }
 ]
